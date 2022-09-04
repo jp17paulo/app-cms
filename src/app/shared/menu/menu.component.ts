@@ -11,7 +11,7 @@ export class MenuComponent implements OnInit {
   constructor(private menu: MenuController) { }
 
   ngOnInit() {
-    this.openFirst();
+    // this.openFirst();
   }
 
   openFirst() {
