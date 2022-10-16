@@ -1,29 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      ADMIN DO CMS
-      <app-menu></app-menu>
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">
-        ADMIN DO CMS
-        <app-menu></app-menu>
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+  <app-menu></app-menu>
   <div id="container">
-    <div class="content">
-    </div>
+
     <h1>CMS</h1>
     Este é um sistema de treinamento do Torne-se um programador <a href="http://www.torneseumprogramador.com.br" target="_blank">http://www.torneseumprogramador.com.br</a>.
-    <strong>Ready to create an app?</strong>
     <hr>
+
+    <button (click)="chamarCamera()" style="color:#fff;background: blue;padding: 20px;">Chamar camera</button>
+
+    <br>
+    <br>
+    <br>
+    ------------------------<br>
+    <img src="{{imagem}}"><br>
+    ------------------------
+    <br>
+    ------------------------<br>
+    <div>{{imagem}}</div><br>
+    ------------------------<br>
+    <br>
+    <br>
+    <br>
+
     <p><a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
 </ion-content>

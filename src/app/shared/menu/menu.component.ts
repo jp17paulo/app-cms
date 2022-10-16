@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { SessionService } from 'src/app/services/sessionService';
 
 @Component({
   selector: 'app-menu',
@@ -8,24 +10,29 @@ import { MenuController } from '@ionic/angular';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private menu: MenuController) { }
+  constructor(
+    private menu: MenuController,
+    private router: Router
+  ) { }
 
   ngOnInit() {
-    // this.openFirst();
+    
   }
 
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
+  home(){
+    this.router.navigateByUrl("/home")
   }
 
-  openEnd() {
-    this.menu.open('end');
+  paginas(){
+    this.router.navigateByUrl("/paginas")
   }
 
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
+  administradores(){
+    this.router.navigateByUrl("/administradores")
   }
 
+  // sair(){
+  //   SessionService.remove("admLogado")
+  //   this.router.navigateByUrl("/login")
+  // }
 }

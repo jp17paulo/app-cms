@@ -6,7 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { MenuComponent } from '../shared/menu/menu.component';
-
+import { HeaderComponent } from '../shared/header/header.component';
 
 
 @NgModule({
@@ -18,7 +18,8 @@ import { MenuComponent } from '../shared/menu/menu.component';
   ],
   declarations: [
     MenuComponent,
-    HomePage
+    HeaderComponent,
+    HomePage,
   ]
 })
 export class HomePageModule {}
