@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+
   }
 
   home(){

@@ -1,13 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { environment } from 'src/environments/environment'
-// import { Administrador } from '../models/administrador'
+import { Administrador } from '../models/administrador'
 
 export class AdministradorService{
   constructor(private http: HttpClient){ }
 
-//   public async todos(token:string, page:number = 1){
-//     return await this.http.get<Administrador[]>(`${environment.uri}/administradores.json?page=${page}`, { headers: new HttpHeaders({authorization: `Bearer ${token}`})}).toPromise()
-//   }
+  // public async todos(token:string, page:number = 1){
+  //   return await this.http.get<Administrador[]>(`${environment.uri}/administradores.json?page=${page}`, { headers: new HttpHeaders({authorization: `Bearer ${token}`})}).toPromise()
+  // }
+  /**********Teste***********/
+  public async todos(){
+    return await this.http.get<Administrador[]>(`${environment.uri}/administradores.json`).toPromise()
+  }
 
 //   public async salvar(token:string, administrador:Administrador){
 //     if(administrador.id > 0){
